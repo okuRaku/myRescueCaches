@@ -1,0 +1,11 @@
+{
+  "name": "myrescuecaches",
+  "version": "1.0.0",
+  "description": "command line utility to aggregate rescue cache data",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "open": "^7.0.0"
+  }
+}
