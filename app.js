@@ -6,7 +6,7 @@ const port = 1420;
 
 const ESI_LOGIN_URL = 'https://login.eveonline.com/oauth/authorize?response_type=token&redirect_uri=http://localhost:1420/callback&client_id=bc8f37ae39414e89b23cccd17dbf4ef3&scope=esi-assets.read_assets.v1'
 
-app.use('/callback', express.static('public'));
+app.use('/callback', express.static(__dirname + '/public'));
 app.get('/authed', async (req, res) => {
     const verifyResp = await fetch('https://esi.evetech.net/verify/?datasource=tranquility&token=' + req.query.token);
     const authedChar = await verifyResp.json();
